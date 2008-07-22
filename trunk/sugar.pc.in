@@ -1,0 +1,6 @@
+Name: Sugar
+Description: Sugar
+Version: 0.1
+
+Requires: 
+Libs: -r:@prefix@/lib/@PACKAGE@/Sugar.dll
