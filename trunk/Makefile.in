@@ -191,6 +191,7 @@ FILES = \
 	Window.cs \
 	DBusActivity.cs \
 	DBusDatastore.cs \
+	Datastore.cs \
 	Activity.cs 
 
 DATA_FILES = 
