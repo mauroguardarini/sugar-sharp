@@ -357,7 +357,7 @@ namespace Sugar {
 			}
 		}
 
-		static DSObject get(Object object_id) {
+		static public DSObject get(Object object_id) {
 //			Loggin.debug("Datastore.get");
 			Dictionary<String,object> metadata=(Dictionary<String,object>)dbus_helpers.get_properties(object_id.ToString());
 

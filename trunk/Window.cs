@@ -49,6 +49,16 @@ namespace Sugar
 			return;
 		}
 		
+		public byte[] getScreenShot() {
+			int width, height;
+			this.GetSize(out width, out height);
+			Gdk.Pixbuf screenShot=new Gdk.Pixbuf(Gdk.Colorspace.Rgb, false, 8, width, height);
+			screenShot=screenShot.CreateFromDrawable (this.GdkWindow, this.GdkWindow.Colormap, 0, 0, 0, 0, width, height);
+			screenShot.ScaleSimple(100,80,Gdk.InterpType.Bilinear);
+			
+			return screenShot.SaveToBuffer("png");			
+		}
+		
 		const string libUISugar = "./bin/uiX11Util.so";
 		[DllImport (libUISugar)]
 		static public extern void sugar_x11_util_set_string_property(IntPtr window,string property,string value);
